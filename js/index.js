@@ -93,3 +93,26 @@ inboxBtn.click(function(){
         inboxInput.attr('placeholder','johnmadden/mail')
     }
 })
+
+
+
+// ************ SECTION FADE IN WHEN SCROLL DOWN **********
+
+const section = $('main section');
+
+function showSection() {
+    var currentBottomWindow = window.pageYOffset + window.innerHeight;
+    for (let i = 0 ; i < section.length ; i++) {
+        if (section[i].offsetTop < currentBottomWindow) {
+            section[i].style.opacity = "1";
+            section[i].style.transform = "translateY(0)";
+        } else {
+            section[i].style.opacity = "0";
+            section[i].style.transform = "translateY(-5px)";
+        }
+    }
+}
+
+showSection();
+
+document.addEventListener('scroll',showSection)
