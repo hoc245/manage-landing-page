@@ -5,6 +5,10 @@ main {
     overflow-y: hidden;
 }
 
+section {
+    transition: all 1s ease;
+}
+
 #intro-section {
     position: relative;
     width: 100%;
